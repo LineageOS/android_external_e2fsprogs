@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bab6814e_f3a48a09",
+        "filename": "lib/blkid/probe_exfat.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2014-11-23T12:06:44Z",
+      "side": 1,
+      "message": "Hmm, the license here might be an issue?",
+      "revId": "37c3a68f44fca76bd58af614465296c1ba2eff3f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
