@@ -6,10 +6,17 @@ cc_library {
     name: "libext2_misc",
     host_supported: true,
 
+    target: {
+        windows: {
+            include_dirs: [ "external/e2fsprogs/include/mingw" ],
+            enabled: true
+        },
+    },
+
     srcs: [
         "create_inode.c",
     ],
-    cflags: ["-W", "-Wall", "-Wno-macro-redefined"],
+    cflags: ["-W", "-Wall"],
     shared_libs: [
         "libext2_quota",
         "libext2fs",
@@ -35,16 +42,41 @@ cc_binary {
         "mke2fs.conf",
     ],
     cflags: ["-W", "-Wall", "-Wno-macro-redefined"],
-    shared_libs: [
-        "libext2fs",
-        "libext2_blkid",
-        "libext2_misc",
-        "libext2_uuid",
-        "libext2_quota",
-        "libext2_com_err",
-        "libext2_e2p",
-    ],
-    system_shared_libs: ["libc"],
+    target: {
+        host: {
+            static_libs: [
+                "libext2_blkid",
+                "libext2_misc",
+                "libext2_uuid",
+                "libext2_quota",
+                "libext2_com_err",
+                "libext2_e2p",
+                "libext2fs",
+                "libsparse",
+                "libbase",
+                "libz",
+            ],
+        },
+        windows: {
+            include_dirs: [ "external/e2fsprogs/include/mingw" ],
+            cflags: ["-D_POSIX", "-D__USE_MINGW_ALARM"],
+            ldflags: ["-static"],
+            host_ldlibs: ["-lws2_32"],
+            enabled: true
+        },
+        android: {
+            shared_libs: [
+                "libext2fs",
+                "libext2_blkid",
+                "libext2_misc",
+                "libext2_uuid",
+                "libext2_quota",
+                "libext2_com_err",
+                "libext2_e2p",
+            ],
+        },
+    },
+    stl: "libc++_static",
     include_dirs: ["external/e2fsprogs/e2fsck"],
 }
 
