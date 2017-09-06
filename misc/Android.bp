@@ -34,7 +34,6 @@ cc_binary {
 
     srcs: [
         "mke2fs.c",
-        "util.c",
         "mk_hugefiles.c",
         "default_profile.c",
     ],
@@ -87,7 +86,6 @@ cc_defaults {
     name: "tune2fs-defaults",
     srcs: [
         "tune2fs.c",
-        "util.c",
     ],
     cflags: [
         "-W",
