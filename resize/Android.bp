@@ -23,8 +23,8 @@ cc_binary {
     system_shared_libs: ["libc", "libdl"],
 }
 
-cc_library_static {
-    name: "libresize2fs",
+cc_defaults {
+    name: "resize2fs_defaults",
 
     srcs: [
         "extent.c",
@@ -36,4 +36,21 @@ cc_library_static {
     ],
     cflags: ["-W", "-Wall", "-Wno-macro-redefined", "-Dmain=resize2fs_main"],
     include_dirs: ["external/e2fsprogs/lib"],
+}
+
+cc_defaults {
+    name: "resize2fs_static_defaults",
+    defaults: ["resize2fs_defaults"],
+    no_named_install_directory: true,
+    relative_install_path: "install/bin",
+}
+
+cc_library_static {
+    name: "libresize2fs",
+    defaults: ["resize2fs_defaults"],
+}
+
+cc_library_static {
+    name: "resize2fs_static",
+    defaults: ["resize2fs_static_defaults"],
 }
