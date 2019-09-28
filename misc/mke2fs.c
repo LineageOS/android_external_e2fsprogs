@@ -1596,7 +1596,7 @@ static void PRS(int argc, char *argv[])
 		config_fn[0] = tmp;
 	profile_set_syntax_err_cb(syntax_err_report);
 	retval = profile_init(config_fn, &profile);
-	if (retval == ENOENT && config_fn[0] != tmp) {
+	if (retval == ENOENT) {
 		retval = profile_init(default_files, &profile);
 		if (retval)
 			goto profile_error;
@@ -2905,6 +2905,12 @@ try_user:
 
 	fs->super->s_errors = errors;
 	return 0;
+}
+
+// TODO(b/141583541): stop leaks
+const char *__asan_default_options()
+{
+	return "detect_leaks=0";
 }
 
 int main (int argc, char *argv[])
