@@ -12,11 +12,8 @@ package {
     default_applicable_licenses: ["external_e2fsprogs_license"],
 }
 
-cc_binary {
-    name: "e2fsdroid",
-    host_supported: true,
-    recovery_available: true,
-    vendor_available: true,
+cc_defaults {
+    name: "e2fsdroid_defaults",
     defaults: ["e2fsprogs-defaults"],
 
     srcs: [
@@ -59,6 +56,24 @@ cc_binary {
             ],
         },
     },
+}
+
+cc_binary {
+    name: "e2fsdroid",
+    defaults: [
+        "e2fsdroid_defaults",
+    ],
+    host_supported: true,
+    vendor_available: true,
+}
+
+cc_binary {
+    name: "e2fsdroid.recovery",
+    defaults: [
+        "e2fsdroid_defaults",
+    ],
+    recovery: true,
+    stem: "e2fsdroid",
 }
 
 //##########################################################################
