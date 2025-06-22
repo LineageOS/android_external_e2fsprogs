@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a2e9cb8a_d9c0909d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2025-06-22T06:27:34Z",
+      "side": 1,
+      "message": "Needs to be converted to Android.bp or die",
+      "revId": "92b7166124f5b7adb5d00e57c8684b6d04898dce",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
