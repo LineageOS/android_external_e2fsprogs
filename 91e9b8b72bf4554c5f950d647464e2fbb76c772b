@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "40f3fc63_73fc65ad",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 34512
+      },
+      "writtenOn": "2025-06-23T10:58:40Z",
+      "side": 1,
+      "message": "build/make/core/main.mk:539: warning: Missing required dependencies:\nTARGET module recovery_deps requires non-existent TARGET module: e2fsck.recovery\nTARGET module recovery_deps requires non-existent TARGET module: resize2fs.recovery\nTARGET module recovery_deps requires non-existent TARGET module: tune2fs.recovery",
+      "revId": "91e9b8b72bf4554c5f950d647464e2fbb76c772b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
