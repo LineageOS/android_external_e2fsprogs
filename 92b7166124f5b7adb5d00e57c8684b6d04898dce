@@ -16,6 +16,23 @@
       "message": "Needs to be converted to Android.bp or die",
       "revId": "92b7166124f5b7adb5d00e57c8684b6d04898dce",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "aa420f5f_8e1fd043",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2025-06-23T02:13:13Z",
+      "side": 1,
+      "message": "NVidia is all that\u0027s left, and we don\u0027t need it, we can just build the .recovery non static version. This was for weird devices and TWRP.\n\nAbandon.",
+      "revId": "92b7166124f5b7adb5d00e57c8684b6d04898dce",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
