@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "430ff80a_e83f1089",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2025-09-01T07:18:58Z",
+      "side": 1,
+      "message": "i still see 4.14+ samsung doing that on github search, valid change ^^",
+      "revId": "7770116a244e96de9672eb8b7a8a1b44ba40ec91",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
