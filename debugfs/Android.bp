@@ -19,6 +19,7 @@ cc_defaults {
     srcs: [
         "debug_cmds.c",
         "debugfs.c",
+        "do_orphan.c",
         "util.c",
         "ncheck.c",
         "icheck.c",
@@ -77,4 +78,12 @@ cc_binary {
     defaults: ["debugfs-defaults"],
 
     static_libs: debugfs_libs,
+
+    target: {
+        glibc: {
+            // Do not link against old prebuilts of glibc.
+            // Note that this can be overridden with BUILD_HOST_static=1
+            static_executable: false,
+        },
+    },
 }
