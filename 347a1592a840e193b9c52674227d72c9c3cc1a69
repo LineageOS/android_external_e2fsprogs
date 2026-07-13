@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7f435de7_2b4c169b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2026-07-13T00:17:39Z",
+      "side": 1,
+      "message": "According to lineage-23.0 commit \"i still see 4.14+ samsung doing that on github search, valid change ^^\"",
+      "revId": "347a1592a840e193b9c52674227d72c9c3cc1a69",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
